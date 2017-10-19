@@ -1,6 +1,6 @@
 {
   "name": "redux-enhancer-react-native-network",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Connect redux to the network changes",
   "main": "index.js",
   "repository": "git@github.com:bamlab/redux-enhancer-react-native-network.git",
