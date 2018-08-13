@@ -12,6 +12,11 @@ export default () => createStore => (...args) => {
     });
   };
 
+  // Set it first ( needed when used with react-native-web )
+  NetInfo.isConnected.fetch().then((isConnected) => {
+  	checkConnection(isConnected)
+  });
+
   NetInfo.isConnected.addEventListener("connectionChange", checkConnection);
 
   return store;
