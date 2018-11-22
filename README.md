@@ -65,6 +65,14 @@ const store = createStore(reducers, initalState, [
   applyMiddleware(sagaMiddleware),
   applyNetworkListener(),
 ]);
+
+// good (with compose)
+const enhancers = [applyNetworkListener(), applyMiddleware(...middlewares)];
+
+const store = () => {
+  let store = createStore(persistedReducer, compose(...enhancers));
+  return { ...store runSaga: sagaMiddleware.run };
+};
 ```
 
 Then you can define a saga like:
