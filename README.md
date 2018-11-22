@@ -71,7 +71,7 @@ const enhancers = [applyNetworkListener(), applyMiddleware(...middlewares)];
 
 const store = () => {
   let store = createStore(persistedReducer, compose(...enhancers));
-  return { ...store runSaga: sagaMiddleware.run };
+  return { ...store, runSaga: sagaMiddleware.run };
 };
 ```
 
