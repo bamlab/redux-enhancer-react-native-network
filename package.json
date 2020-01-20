@@ -7,6 +7,6 @@
   "author": "Alice Breton <aliceb@bam.tech>",
   "license": "MIT",
   "dependencies": {
-    "react-native-netinfo": "^1.1.0"
+    "@react-native-community/netinfo": "^5.3.3"
   }
 }
