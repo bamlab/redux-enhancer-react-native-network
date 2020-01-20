@@ -1,4 +1,4 @@
-import { NetInfo } from "react-native";
+import NetInfo from "react-native-netinfo";
 
 export const STATUS_CHANGED = "STATUS_CHANGED";
 

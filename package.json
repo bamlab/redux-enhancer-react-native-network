@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "git@github.com:bamlab/redux-enhancer-react-native-network.git",
   "author": "Alice Breton <aliceb@bam.tech>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react-native-netinfo": "^1.1.0"
+  }
 }
