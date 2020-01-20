@@ -5,19 +5,19 @@ export const STATUS_CHANGED = "STATUS_CHANGED";
 export default () => createStore => (...args) => {
   const store = createStore(...args);
 
-  const checkConnection = isConnected => {
+  const checkConnection = (state) => {
     store.dispatch({
       type: STATUS_CHANGED,
-      payload: { isConnected }
+      payload: state.isConnected
     });
   };
 
   // Set it first ( needed when used with react-native-web )
-  NetInfo.isConnected.fetch().then((isConnected) => {
-  	checkConnection(isConnected)
+  NetInfo.fetch().then((state) => {
+    checkConnection(state.isConnected)
   });
 
-  NetInfo.isConnected.addEventListener("connectionChange", checkConnection);
+  NetInfo.addEventListener("connectionChange", checkConnection);
 
   return store;
 };
